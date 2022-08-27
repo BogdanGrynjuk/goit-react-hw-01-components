@@ -1,0 +1,32 @@
+.items {
+  margin-bottom: 20px;
+  width: 700px;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-radius: 5px;
+  color: var(--color-primary);
+  box-shadow: var(--shadow),
+              var(--shadow);
+  overflow: hidden;
+  
+}
+
+.items > thead {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+  text-transform: uppercase;  
+}
+
+.items > tbody > tr {
+  background-color: var(--color-white);
+}
+
+.items > tbody > tr:nth-child(2n) {
+  background-color: var(--color-background);
+}
+
+.items td,
+.items th {
+  padding: 10px;
+}

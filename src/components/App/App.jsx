@@ -1,16 +1,21 @@
 import css from './App.module.css';
 import user from 'user.json';
 import data from 'data.json';
+import friends from 'friends.json'
+import transactions from 'transactions.json'
 
 import { TaskTitle } from 'components/TaskTitle/TaskTitle';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
+import { FriendList } from 'components/FriendList/FriendList';
+import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+
 
 
 export const App = () => {
   return (
     <div className={css.wrapper}>
-      <TaskTitle title={"Task #1"} />
+      <TaskTitle title="Task #1" />
       <Profile
         username={user.username}
         tag={user.tag}
@@ -21,6 +26,10 @@ export const App = () => {
       <TaskTitle title="Task #2" />
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
+      <TaskTitle title="Task #3" />
+      <FriendList friends={friends} />
+      <TaskTitle title="Task #4" />
+      <TransactionHistory items={transactions} />
       
     </div>    
   );
